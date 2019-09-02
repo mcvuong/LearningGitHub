@@ -25,7 +25,7 @@ Needs to be able to:
 
 1. Each cell with one or no neighbors dies (solitude).
 2. Each cell with four or more neighbors dies (overpopulation).
-3. Each cell with two or thee neighbors survives
+3. Each cell with two or three neighbors survives
 4. Each empty cell with three neighbors becomes populated.
 5. Showcase game in the terminal.
 
@@ -94,7 +94,7 @@ response = scnr.nextLine(); //not sure if this will work
 System.out.println("Game has been saved.");
 
 if (response.equals("quit") || response.equals("Quit")) {
-     System.exit(); //possibly works?
+     System.exit(1); //possibly works?
 }
 
 System.out.println("Remember: to save the game, you must enter: \"save\".
@@ -200,6 +200,8 @@ Then the one that will first be examined would be this one:
 `001<--100`
 
 After each String is examined, then the past game board will be cleared (newline will be spammed by **int size**). A temporary file (**file temp**) will be created and store the current data. Then, the current game board will be printed out in the terminal.
+
+Additionally, it will be at this part where the game will figure out if a loaded document is a valid game board.
 
 Variables:
 
